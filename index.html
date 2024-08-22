@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alura.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header"> <!-- Encabezado -->
+        <img class="header_logo" src="assets/kuri-removebg-preview.png" alt="logo de Alura">
+            <p class="header_text">ALURA LATAM | ORACLE ONE</p>
+        <ul class="header_redes">
+            <a class="button" id="lnkd" href="https://www.linkedin.com/in/marcos-lopez-ml" target="_blank">Linkedin</a>
+            <a class="button" id="git" href="https://github.com/pipon7?tab=repositories" target="_blank">GitHub</a>
+        </ul>
+    </header>
+    <main class="main"> <!-- Titulo - main -->
+        <div class="contenedor_titulo">
+            <h1 class="titulo">ENCRIPTADOR DE TEXTO</h1>
+        </div>
+        <div class="cuadros_de_texto"> <!-- Cuadros-->
+            <div class="cuadro_texto">
+                <textarea name="encriptar" id="encriptar" class="encriptar" autocapitalize="off" spellcheck="false" placeholder="Ingrese el texto a encriptar!" oninput="desabilitarBoton();"></textarea>
+            </div>
+            <div class="ojo_container">
+                <a href="#" class="ojo_container" id="ojo">
+                    <img onclick="ojoOcultar();" src="assets/ojo-removebg-preview.png" alt="Logo de ojo para esconder el texto" class="ojo">
+                </a>
+            </div>
+            <div class="cuadro_texto">
+                <textarea name="encriptado" id="encriptado" class="encriptado" autocapitalize="off" spellcheck="false" placeholder="Mensaje no encontrado!" readonly></textarea>
+            </div>
+        </div>
+        <div class="aclaracion"> <!-- Reglas sobre el texto -->
+            <p class="aclaracion_uso">¡Solo letras minúsculas sin tildes ni caracteres especiales!</p>
+        </div>
+        <section class="btns"> <!-- Botones-->
+            <div class="botones">
+                <div class="botones_encriptar">
+                    <button onclick="botonEncriptar();" class="button" id="boton_encriptar" disabled>Encriptar</button>
+                    <button onclick="botonDesencriptar();" class="button" id="boton_desencriptar" disabled>Desencriptar</button>
+                </div>
+                <div class="botones_encriptado">
+                    <button onclick="botonCopiar();" class="button" id="boton_copiar" disabled>Copiar</button>
+                    <button onclick="botonBorrar();" class="button" id="boton_borrar" disabled>Borrar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer> <!-- Firma -->
+        <p class="firma">Proyecto realizado por Marcos Lopez.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

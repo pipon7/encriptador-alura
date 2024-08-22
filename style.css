@@ -1,0 +1,469 @@
+:root {
+    --font-family-extrange: "Exo 2", sans-serif;
+    --font-size-grandestext: 5vh;
+    --color-negro: #000000;
+    --color-primario: rgb(158, 129, 254);
+    --color-secundario: rgb(214, 202, 254);
+    --color-borde: rgb(50, 50, 50);
+    --font-size-textocomun: 1.5vh;
+    --font-size-textocuadros: 3vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/fondo-removebg-preview.png);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.2%;  /* top, right bottom left */
+    margin: 0;
+
+}
+
+.header_logo {
+    box-sizing: border-box;
+    height: 10vh;
+  }
+
+.header_text {
+    text-align: center;
+    font-size: var(--font-size-grandestext);
+    color: var(--color-negro);
+    padding: 0 ;
+    margin: 0 0 0 22.5vh;
+    font-family: var(--font-family-extrange);
+}
+
+.header_redes {
+    display: flex;
+    flex-direction: row;
+    gap: 2.2rem;
+    margin: 3rem 2rem 0 0;
+    padding-top: 1%;
+    height: 5vh;
+}
+
+.main {
+    display: grid;
+    margin: 0;  /* top, right bottom left */
+}
+
+.titulo {
+    text-align: center;
+    font-family: var(--font-family-extrange);
+    margin: 0;
+    font-size: 3.5vh;
+}
+
+.cuadros_de_texto {
+    justify-content: center;
+    display: flex;
+    height: 60vh;
+    margin: 3rem 3rem 0 3rem;
+}
+
+.cuadro_texto {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    overflow: hidden;
+}
+
+.encriptar {
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    resize: none;
+    background: rgba(128, 128, 128, 0.2) url(assets/mago-oscuro.png) no-repeat center 50%;
+    background-size: 40%;
+    margin-left: 30%;
+    border: 5px solid var(--color-borde);
+    border-radius: 2%;
+    font-size: var(--font-size-textocuadros);
+    font-family: var(--font-family-extrange);
+    scrollbar-width: none;
+}
+
+.encriptado {
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    resize: none;
+    background: rgba(128, 128, 128, 0.2) url(assets/dragonblanco-removebg-preview.png) no-repeat center 50%;
+    background-size: 50%;
+    margin-right: 30%;
+    border: 5px solid var(--color-borde);
+    border-radius: 2%;
+    font-size: var(--font-size-textocuadros);
+    font-family: var(--font-family-extrange);
+    scrollbar-width: none;
+}
+
+.encriptar:focus {
+    /* Estilos cuando se clickea para escribir */
+    background: none; /* Elimina la imagen de fondo */
+    background: rgba(128, 128, 128, 0.2);
+    background-size: 0%;
+    border-color: var(--color-primario); /* Cambia el color del borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega un efecto de sombra */
+    outline: 2px solid var(--color-primario);
+}
+
+.encriptar:hover, .encriptado:hover {
+    /* background: rgba(128, 128, 128, 0.2); */
+    border-color: var(--color-primario); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    outline: 2px solid var(--color-primario);
+}
+
+.ojo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+}
+
+.ojo {
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+}
+
+.aclaracion {
+    padding: 0;
+    margin-left: 17%;
+    box-sizing: border-box;
+}
+
+.aclaracion_uso {
+    position: relative;
+    margin: 0;
+    font-weight: bold;
+    font-family: var(--font-family-extrange);
+    font-size: 80%;
+}
+
+.btns {
+    margin: 0;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    gap: 20%;
+    margin-top: 1%;
+    padding: 0 10rem 0 10rem;
+}
+
+.botones_encriptar {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.botones_encriptado {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.button {
+  font-size: 2vh;
+  padding: 1vh 3vh;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(var(--color-secundario), var(--color-primario));
+  border: 2px solid var(--color-borde);
+  border-bottom: 5px solid var(--color-borde);
+  box-shadow: 0px 1px 6px 0px var(--color-primario);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+.button:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
+  }
+
+.button:hover {
+    background-image: linear-gradient(var(--color-primario), var(--color-secundario));
+}
+
+.button:disabled {
+    background: #938c8b;
+    cursor: default;
+    border-bottom: 5px solid var(--color-borde);
+    transform: none;
+}
+
+
+footer {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.firma {
+    text-align: center;
+    font-family: var(--font-family-extrange);
+    font-size: var(--font-size-textocomun);
+    text-decoration: underline;
+}
+
+  
+@media (max-width: 1280px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .header_logo {
+        width: 7%;
+    }
+
+    .header_text {
+        margin-left: 17%;
+    }
+
+    .cuadros_de_texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin: 0%;
+        height: 60vh;
+    }
+
+    .cuadro_texto {
+        width: 100%;
+    }
+
+    .encriptar, .encriptado {
+        width: 100%;
+        margin: 0;
+        background-size: 30%;
+        font-size: 1rem;
+    }
+
+    .encriptar {
+        background-size: 20%;
+    }
+
+    .ojo_container {
+        width: 8vh;
+    }
+
+    .ojo {
+        width: 80%;
+    }
+
+    .aclaracion {
+        margin: 0;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .botones_encriptar {
+        position: relative;
+        bottom: 34.2vh;
+        left: 1.5vh;
+        gap: 17vh;
+    }
+
+    .botones_encriptado {
+        position: relative;
+        bottom: 4vh;
+    }
+
+    .button {
+        size: 70vh;
+    }
+
+    footer {
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .header_logo{
+        width: 10vh;
+    }
+
+    .header_text {
+        font-size: 2rem;
+        margin-left: 16%;
+    }
+
+    .header_redes {
+        margin: 2rem 2rem 0 0;
+        padding: 0;
+        height: 5.2vh;
+        box-sizing: border-box;
+    }
+
+    .main   {
+        margin: 0;
+    }
+
+    .titulo {
+        font-size: 3.5vh;
+    }
+
+    .cuadros_de_texto {
+        height: 70vh;
+    }
+
+    .botones {
+        height: 10px;
+    }
+
+    .botones_encriptar {
+        bottom: 35vh;
+    }
+
+    .botones_encriptado {
+        bottom: 0vh;
+    }
+
+    footer {
+        margin-top: 2.3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-top: 5vh;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .header_logo {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    .header_text {
+        font-size: 4vh;
+        /* width: 20vh; */
+        margin: 0;
+    }
+
+    .header_redes {
+        position: relative;
+        top: 4vh;
+        width: 10%;
+        right: 15.9vh;
+    }
+
+    a {
+        height: 1.5vh;
+    }
+
+    .titulo {
+        font-size: 3vh;
+    }
+
+    .cuadros_de_texto {
+        display: flex;
+        flex-direction: column;
+        gap: 3%;
+        width: 100%;
+    }
+
+    .cuadro_texto{
+        width: 100%;
+    }
+
+    .ojo_container {
+        width: 7vh;
+    }
+
+    .button {
+        font-size: 1.4vh;
+        padding: 0.8vh 2.5vh;
+    }
+
+    footer {
+        margin-top: 4.2vh;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .body {
+        overflow: auto;
+    }
+
+    .header_text {
+        font-size: 1.5rem;
+        margin-top: 1vh;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .header_redes {
+        display: flex;
+        flex-direction: row;
+        gap: 70%;
+        width: 47%;
+        position: fixed;
+        top: 6vh;
+    }
+
+    .main {
+        margin-top: 8vh;
+    }
+    .titulo {
+        font-size: 2.5vh;
+    }
+
+    footer {
+        margin-top: 10%;
+    }
+
+    .firma {
+        margin-top: 0;
+    }
+}   
+
+@media (max-width: 375px) {
+
+    footer {
+        margin-top: 7%;
+    }
+}
